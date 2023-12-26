@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Dork Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50b3a2;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .results {
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .results h2 {
+            margin-top: 0;
+        }
+        .results ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .results ul li {
+            background: #f8f8f8;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .results ul li:hover {
+            background: #efefef;
+        }
+        .results a {
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Google Dork Results</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        {% for key, dork_results in results.items() %}
+            <div class="results">
+                <h2>Target: {{ key[0] }}, Dork: {{ key[1] }}</h2>
+                <ul>
+                    {% for result in dork_results %}
+                        <li><a href="{{ result['link'] }}">{{ result['title'] }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

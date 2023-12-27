@@ -55,8 +55,8 @@ def main():
     """
     print(ascii_name)
     print("Welcome to the Google Dork Runner!")
-    print("This tool runs a list of Google dorks against specified targets.")
-    print("Results are printed and saved to 'dork_results.txt'.")
+    print("This tool runs a list of Google dorks against specified targets. \nIf no dorks list or single dork is provided a default list will be used.")
+    print("Results are printed and saved to 'dork_results.txt' and displayed in the auto-refreshing web interface.")
     print("\nNote: To mitigate the risk of IP banning, consider using 'proxychains4' for rotating proxies.")
     print("\nRunning the script...")
 

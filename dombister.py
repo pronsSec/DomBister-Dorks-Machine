@@ -20,6 +20,10 @@ results_lock = Lock()
 def open_browser():
     webbrowser.open_new("http://127.0.0.1:5000/")
 
+def read_file(file_path):
+    with open(file_path, 'r') as file:
+        return [line.strip() for line in file.readlines()]
+
 def google_search(query):
     try:
         results = []

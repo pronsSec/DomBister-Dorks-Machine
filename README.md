@@ -31,13 +31,15 @@ The Google Dork Runner is a Python-based tool designed to automate the process o
 
 python dombister.py dorks.txt -tf targets.txt
 
+![Uploading Screenshot 2023-12-27 at 6.27.01 AM.png…]()
+
 
 Or use `-t [target]` for a single target.
 
-4. After execution, press Enter to view results in the web interface (`http://127.0.0.1:5000/`).
+4. You will be able to view real-time results in the web interface (`http://127.0.0.1:5000/`).
 
 ### Web Interface:
-- The web interface displays the results in a user-friendly format automatically after finishing.
+- The web interface displays the results in a user-friendly format automatically.
 
 ## Ethical Use
 This tool is created for educational and ethical use only. Users are responsible for adhering to all applicable laws and regulations, including respecting the terms of service of search engines and websites. The authors are not responsible for misuse or for any damages resulting from the use of this tool.

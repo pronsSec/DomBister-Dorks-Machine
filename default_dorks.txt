@@ -1,0 +1,127 @@
+intext:"error_reporting(E_ALL)" intitle:"phpinfo()"
+intext:"sql_query" inurl:"admin.php"
+inurl:"config.inc.php" OR inurl:"config/config.ini.php" OR inurl:"config/config.php"
+intitle:"index of" intext:"wp-config.php"
+inurl:"upload.php" intext:"File Upload"
+inurl:"error_log" intext:"PHP Error logs"
+inurl:"login.php" intext:"Login Page"
+inurl:"login.html" intext:"Admin Login"
+intext:"-----BEGIN PRIVATE KEY-----"
+intext:"client_secret"
+intext:"password" filetype:env
+intext:"apikey" filetype:env
+intext:"username" filetype:env
+intext:"jdbc.password"
+intext:"oauth.token"
+filetype:doc OR filetype:docx OR filetype:ppt OR filetype:pptx OR filetype:xls OR filetype:xlsx OR filetype:pdf
+filetype:php intext:"DB_PASSWORD"
+filetype:php intext:"DB_HOST"
+filetype:php intext:"DB_USER"
+filetype:php intext:"DB_NAME"
+intitle:"Index of /" + "backup"
+intitle:"Index of /" + "uploads"
+intitle:"Index of /" + "confidential"
+filetype:txt "private_key"
+filetype:txt "private.key"
+filetype:txt "private_key.pem"
+filetype:txt "private_key.txt"
+filetype:log inurl:"access.log"
+filetype:log inurl:"error.log"
+filetype:log inurl:"debug.log"
+filetype:log inurl:"application.log"
+intitle:"RouterOS" inurl:"winbox"
+intitle:"Ubiquiti" intext:"airOS"
+intitle:"MikroTik" intext:"Webfig"
+intitle:"Ubiquiti" intext:"Rocket M5"
+intitle:"Ubiquiti" intext:"Rocket M2"
+intitle:"Ubiquiti" intext:"RocketDish"
+intitle:"Ubiquiti" intext:"NanoBeam"
+inurl:/view.shtml
+intitle:"Live View / - AXIS"
+intitle:"Live View / - AXIS 206M"
+inurl:/control/userimage.html
+intitle:"Toshiba Network Camera" user login
+intitle:"i-Catcher Console - Web Monitor"
+intitle:"Live NetSnap Cam-Server feed"
+inurl:"/axis-cgi/mjpg"
+intitle:"Live View / - AXIS 210"
+intitle:"Live View / - AXIS 2400 Video Server"
+inurl:/view/index.shtml
+intitle:"Live View / - AXIS 240"
+inurl:/mjpg/video.mjpg
+intitle:"Live View / - AXIS 206W"
+inurl:/axis-cgi/jpg
+intitle:"Toshiba Network Camera" user login
+intitle:"i-Catcher Console - Web Monitor"
+intitle:"Live NetSnap Cam-Server feed"
+intitle:"Index of /admin"
+intitle:"Index of /backup"
+intitle:"Index of /config"
+intitle:"Index of /database"
+intitle:"Index of /logs"
+intitle:"Index of /password"
+intitle:"Index of /private"
+intitle:"Index of /secret"
+intitle:"Index of /temp"
+intitle:"Index of /upload"
+intitle:"Index of /www"
+intitle:"RouterOS" inurl:/winbox
+intitle:"Ubiquiti" intext:"airOS"
+intitle:"MikroTik" intext:"Webfig"
+intitle:"MikroTik" intext:"Chimay Red"
+intitle:"Ubiquiti" intext:"Rocket M5"
+intitle:"Ubiquiti" intext:"Rocket M2"
+intitle:"Ubiquiti" intext:"RocketDish"
+intitle:"Ubiquiti" intext:"NanoBeam"
+intitle:"Ubiquiti" intext:"NanoStation"
+intitle:"Ubiquiti" intext:"PowerBeam"
+intitle:"Ubiquiti" intext:"LiteBeam"
+intitle:"Ubiquiti" intext:"ToughSwitch"
+intitle:"Ubiquiti" intext:"EdgeRouter"
+intitle:"Ubiquiti" intext:"EdgeMax"
+intitle:"DVR Login" inurl:/login.htm
+intitle:"DVR User Login" inurl:/login.htm
+intitle:"DVR User Login" inurl:/logon.htm
+intitle:"DVR User Login" inurl:/login.html
+intitle:"DVR User Login" inurl:/login.html
+intitle:"DVR User Login" inurl:/logon.html
+intitle:"DVR User Login" inurl:/login.asp
+intitle:"DVR User Login" inurl:/logon.asp
+intitle:"DVR User Login" inurl:/login.aspx
+intitle:"DVR User Login" inurl:/logon.aspx
+filetype:conf inurl:web.config
+filetype:conf inurl:httpd.conf
+filetype:conf inurl:php.ini
+filetype:conf inurl:my.cnf
+filetype:conf inurl:config.inc.php
+filetype:conf inurl:config.php
+filetype:conf inurl:settings.php
+filetype:conf inurl:application.properties
+filetype:conf inurl:application.yml
+filetype:conf inurl:database.yml
+filetype:conf inurl:connectionStrings.config
+filetype:conf inurl:settings.xml
+filetype:conf inurl:connections.xml
+intitle:"Index of /" + "admin"
+intitle:"Index of /" + "backup"
+intitle:"Index of /" + "logs"
+intitle:"Index of /" + "config"
+intitle:"Index of /" + "database"
+intitle:"Index of /" + "passwd"
+intitle:"Index of /" + "phpmyadmin"
+intitle:"Index of /" + "wp-admin"
+intitle:"Index of /" + "wp-content"
+intitle:"Index of /" + "wp-includes"
+intitle:"Index of /" + "uploads"
+inurl:/camera/view
+inurl:/view.shtml
+inurl:/view/index.shtml
+inurl:/axis-cgi/mjpg
+inurl:/control/userimage.html
+inurl:/control/faststream.htm
+inurl:/index/blink.cgi
+intitle:"Printer Configuration" inurl:/ipp
+intitle:"Printer Configuration" inurl:/ipp
+intitle:"Printer Status" inurl:/ipp
+intitle:"Printer Management" inurl:/ipp
+intitle:"CUPS" intext:"Printer configuration" inurl:/admin

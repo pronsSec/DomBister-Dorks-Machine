@@ -31,7 +31,7 @@ The Google Dork Runner is a Python-based tool designed to automate the process o
 
 python dombister.py dorks.txt -tf targets.txt
 
-![Uploading Screenshot 2023-12-27 at 6.27.01 AM.png…]()
+![Screenshot 2023-12-27 at 6 27 01 AM](https://github.com/pronsSec/DomBister-Dorks-Machine/assets/93559326/b1b426e7-f853-4faf-b322-b649bd524f0e)
 
 
 Or use `-t [target]` for a single target.

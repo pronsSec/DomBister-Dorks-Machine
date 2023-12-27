@@ -11,8 +11,7 @@ The Google Dork Runner is a Python-based tool designed to automate the process o
 ### Requirements:
 - Python 3.x
 - Flask
-- BeautifulSoup4
-- requests
+- google
 
 ### Installation:
 1. **Clone the repository:**
@@ -26,7 +25,7 @@ The Google Dork Runner is a Python-based tool designed to automate the process o
 
 
 ## Usage
-1. Prepare your dorks file (`dorks.txt`) with one dork per line.
+1. Prepare your dorks file (`dorks.txt`) with one dork per line. If you do not provide a single dork or target the tool will use a default list curated by myself.
 2. If you have multiple targets, prepare a targets file (`targets.txt`) with one target per line.
 3. Run the script:
 
@@ -34,11 +33,11 @@ python dombister.py dorks.txt -tf targets.txt
 
 
 Or use `-t [target]` for a single target.
+
 4. After execution, press Enter to view results in the web interface (`http://127.0.0.1:5000/`).
 
 ### Web Interface:
-- The web interface displays the results in a user-friendly format.
-- Navigate to `http://127.0.0.1:5000/` in your web browser to view the results.
+- The web interface displays the results in a user-friendly format automatically after finishing.
 
 ## Ethical Use
 This tool is created for educational and ethical use only. Users are responsible for adhering to all applicable laws and regulations, including respecting the terms of service of search engines and websites. The authors are not responsible for misuse or for any damages resulting from the use of this tool.

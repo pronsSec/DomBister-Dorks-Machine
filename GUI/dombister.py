@@ -2,8 +2,13 @@ import argparse
 from googlesearch import search
 from flask import Flask, render_template
 import ssl
+import webbrowser
+import threading
 
 ssl._create_default_https_context = ssl._create_unverified_context
+
+def open_browser():
+      webbrowser.open_new("http://127.0.0.1:5000/")
 
 
 app = Flask(__name__)
@@ -25,6 +30,7 @@ def google_search(query):
 def run_dorks(dorks, targets):
     global global_results
     all_results = {}
+    #print(all_results)
     for target in targets:
         for dork in dorks:
             query = f"{dork} site:{target}"
@@ -32,6 +38,7 @@ def run_dorks(dorks, targets):
             results = google_search(query)
             all_results[(target, dork)] = results
     global_results = all_results
+    #print(all_results)
     return all_results
 
 def save_and_print_results(results):
@@ -92,7 +99,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-    input("\nPress Enter to start the web interface...")
+    #input("\nPress Enter to start the web interface...")
+    threading.Timer(1.25, open_browser).start()  # Waits for 1.25 seconds before opening the browser
+
     app.run(debug=False)  # Run Flask app in production mode
-
-

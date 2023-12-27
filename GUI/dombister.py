@@ -90,8 +90,9 @@ def main():
     results = run_dorks(dorks, targets)
     save_and_print_results(results)
 
-    input("\nPress Enter to view the results in a web interface...")
-    app.run(debug=True)
-
 if __name__ == '__main__':
     main()
+    input("\nPress Enter to start the web interface...")
+    app.run(debug=False)  # Run Flask app in production mode
+
+

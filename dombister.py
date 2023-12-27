@@ -46,8 +46,40 @@ def index():
         return render_template('results.html', results=global_results)
 
 def main():
-    # ... [ASCII Art and Intro Text and Argument Parsing] ...
+    ascii_name = r"""
+     ____                  _     _     _            
+    |  _ \  ___  _ __ ___ | |__ (_)___| |_ ___ _ __ 
+    | | | |/ _ \| '_ ` _ \| '_ \| / __| __/ _ \ '__|
+    | |_| | (_) | | | | | | |_) | \__ \ ||  __/ |   
+    |____/ \___/|_| |_| |_|_.__/|_|___/\__\___|_|   
+    """
+    print(ascii_name)
+    print("Welcome to the Google Dork Runner!")
+    print("This tool runs a list of Google dorks against specified targets.")
+    print("Results are printed and saved to 'dork_results.txt'.")
+    print("\nNote: To mitigate the risk of IP banning, consider using 'proxychains4' for rotating proxies.")
+    print("\nRunning the script...")
 
+    parser = argparse.ArgumentParser(description='Run Google dorks on specified targets.')
+    parser.add_argument('-d', '--dorks_file', help='File containing Google dorks, one per line.', default=None)
+    parser.add_argument('-t', '--target', help='Single target to run dorks against.')
+    parser.add_argument('-tf', '--targets_file', help='File containing list of targets, one per line.')
+    args = parser.parse_args()
+
+    if args.dorks_file:
+        dorks = read_file(args.dorks_file)
+    else:
+        # Use the default dorks file
+        dorks = read_file(DEFAULT_DORKS_FILE)
+
+    if args.targets_file:
+        targets = read_file(args.targets_file)
+    elif args.target:
+        targets = [args.target]
+    else:
+        raise ValueError("No target or targets file provided.")
+
+    # Start the dork processing in a separate thread
     dork_thread = threading.Thread(target=process_dorks, args=(dorks, targets))
     dork_thread.start()
 

@@ -7,6 +7,11 @@ import threading
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
+
+# Default dorks file
+DEFAULT_DORKS_FILE = "default_dorks.txt"
+
+
 def open_browser():
       webbrowser.open_new("http://127.0.0.1:5000/")
 
@@ -80,13 +85,17 @@ def main():
     
 
     parser = argparse.ArgumentParser(description='Run Google dorks on specified targets.')
-    parser.add_argument('dorks_file', help='File containing Google dorks, one per line.')
+    parser.add_argument('-d', '--dorks_file', help='File containing Google dorks, one per line.', default=None)
     parser.add_argument('-t', '--target', help='Single target to run dorks against.')
     parser.add_argument('-tf', '--targets_file', help='File containing list of targets, one per line.')
     args = parser.parse_args()
 
-    dorks = read_file(args.dorks_file)
-    
+    if args.dorks_file:
+        dorks = read_file(args.dorks_file)
+    else:
+        # Use the default dorks file
+        dorks = read_file(DEFAULT_DORKS_FILE)
+
     if args.targets_file:
         targets = read_file(args.targets_file)
     elif args.target:
@@ -96,6 +105,8 @@ def main():
 
     results = run_dorks(dorks, targets)
     save_and_print_results(results)
+
+
 
 if __name__ == '__main__':
     main()

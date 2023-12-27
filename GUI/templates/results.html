@@ -98,12 +98,13 @@
             <div class="results">
                 <h2>Target: {{ key[0] }}, Dork: {{ key[1] }}</h2>
                 <ul>
-                    {% for result in dork_results %}
-                        <li><a href="{{ result['link'] }}">{{ result['title'] }}</a></li>
+                    {% for url in dork_results %}
+                        <li><a href="{{ url }}">{{ url }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
         {% endfor %}
     </div>
+
 </body>
 </html>

@@ -57,6 +57,20 @@ def index():
 
 def main():
     # ... [ASCII Art and Intro Text] ...
+    ascii_name = r"""
+     ____                  _     _     _            
+    |  _ \  ___  _ __ ___ | |__ (_)___| |_ ___ _ __ 
+    | | | |/ _ \| '_ ` _ \| '_ \| / __| __/ _ \ '__|
+    | |_| | (_) | | | | | | |_) | \__ \ ||  __/ |   
+    |____/ \___/|_| |_| |_|_.__/|_|___/\__\___|_|   
+    """
+    print(ascii_name)
+    print("Welcome to the Google Dork Runner!")
+    print("This tool runs a list of Google dorks against specified targets.")
+    print("Results are printed and saved to 'dork_results.txt'.")
+    print("\nNote: To mitigate the risk of IP banning, consider using 'proxychains4' for rotating proxies.")
+    print("\nRunning the script...")
+    
 
     parser = argparse.ArgumentParser(description='Run Google dorks on specified targets.')
     parser.add_argument('dorks_file', help='File containing Google dorks, one per line.')

@@ -19,8 +19,8 @@ global_results = {}
 def google_search(query):
     try:
         results = []
-        # Adjust the number of results and pause as needed
-        for j in search(query, num=10, stop=10, pause=2):
+        # Adjust the number of results and pause as needed, may need to adjust if there are issues with being ip banned 
+        for j in search(query, num=10, stop=500, pause=4):
             results.append(j)
         return results
     except Exception as e:
